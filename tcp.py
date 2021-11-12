@@ -11,6 +11,7 @@ class TCP:
         print('Connection...')
         self.connection, addr = connection1.accept()
         print('Connection... Enable to' + str(addr))
+    
     def commands(self, command):
         self.connection.send(command.encode())
         return self.connection.recv(1024).decode()
