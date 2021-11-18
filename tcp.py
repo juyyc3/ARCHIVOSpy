@@ -1,5 +1,4 @@
 import socket 
-import json
 
 class TCP:
     def __init__(self, ip, puerto):
@@ -10,7 +9,7 @@ class TCP:
         connection1.listen(0)
         print('Connection...')
         self.connection, addr = connection1.accept()
-        print('Connection... Enable to' + str(addr))
+        print('Connection... Enable to ' + str(addr))
     
     def commands(self, command):
         self.connection.send(command.encode())
